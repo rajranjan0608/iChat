@@ -1,0 +1,77 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #0274ea;
+    height: 100vh;
+}
+input:focus{
+    outline: none;
+    padding: 2px;
+}
+.icon{
+    height: 15vh;
+    width: 200px; 
+    display: block;
+    margin:auto;
+}
+*::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.container{
+    width: 90vw;
+    height: 66vh;
+    overflow: scroll;
+    margin:auto;
+}
+.left{
+    float: left;
+    background-color: rgb(255, 0, 242);
+}
+.right{
+    float: right;
+    background-color: rgb(217, 255, 0);
+}
+.message{
+    max-width: 60%;
+    padding: 5px;
+    border:0.1px solid black;
+    box-shadow: 1px 1px 1px 0.1px;
+    width: max-content;
+    margin:7px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    clear:both;
+}
+.new-message{
+    height: 8vh;
+    width:90vw;
+    margin:auto;
+}
+.new-message .new-message-text{
+    width: 75%;;
+    height: 50px;
+    border:0.1px solid black;
+    border-radius: 10px 0px 0px 10px;
+    font-size: 1.5rem;
+    font-family: fantasy;
+}
+.new-message .new-message-submit{
+    width: 22%;
+    height: 51px;
+    border:0.1px solid black;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-family: fantasy;
+}
+.channel-name{
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px black;
+    font-family: fantasy;
+}

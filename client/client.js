@@ -1,4 +1,7 @@
-const socket = io();
+
+var host=location.origin.replace(/^http/,"http");
+
+socket=io.connect(host);
 const form = document.getElementsByClassName('new-message')[0];
 const messageInput = document.getElementsByClassName('new-message-text')[0];
 const messageContainer = document.getElementsByClassName('container')[0];

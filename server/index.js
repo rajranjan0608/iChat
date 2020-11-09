@@ -1,4 +1,4 @@
-const io = require('socket.io')(8000);
+const io = require('socket.io')('https://qclon.herokuapp.com/');
 const users = {};
 io.on('connection', socket => {
     socket.on('new-user-joined', name => {

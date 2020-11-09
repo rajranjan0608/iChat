@@ -1,4 +1,4 @@
-let PORT = process.env.PORT || 8000;
+let PORT = 3000;
 var express = require('express');
 var app = express();
 
@@ -24,6 +24,6 @@ io.on('connection', socket => {
      });
 })
 
-server.listen(PORT, function() {
+server.listen(PORT || process.env.PORT, function() {
     console.log('Chat server running');
   });

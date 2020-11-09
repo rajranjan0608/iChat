@@ -7,6 +7,7 @@ var server = http.Server(app);
 
 const io = require('socket.io')(server);
 const users = {};
+let v;
 io.on('connection', socket => {
     socket.on('new-user-joined', name => {
         users[socket.id] = name;

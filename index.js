@@ -1,12 +1,11 @@
-let PORT = process.env.PORT || 5000;
+let PORT = process.env.PORT || 8000;
 var express = require('express');
 var app = express();
 
 var http = require('http');
 var server = http.Server(app);
 
-app.use(express.static('client'));
-const io = require('socket.io')(sever);
+const io = require('socket.io')(server);
 const users = {};
 io.on('connection', socket => {
     socket.on('new-user-joined', name => {
@@ -23,3 +22,7 @@ io.on('connection', socket => {
         socket.broadcast.emit('user-left', users[socket.id]);
      });
 })
+
+server.listen(PORT, function() {
+    console.log('Chat server running');
+  });

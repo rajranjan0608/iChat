@@ -1,5 +1,12 @@
 let PORT = process.env.PORT || 5000;
-const io = require('socket.io')(PORT);
+var express = require('express');
+var app = express();
+
+var http = require('http');
+var server = http.Server(app);
+
+app.use(express.static('client'));
+const io = require('socket.io')(sever);
 const users = {};
 io.on('connection', socket => {
     socket.on('new-user-joined', name => {

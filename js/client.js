@@ -1,4 +1,4 @@
-const socket = io('http://localhost:8000');
+const socket = io();
 const form = document.getElementsByClassName('new-message')[0];
 const messageInput = document.getElementsByClassName('new-message-text')[0];
 const messageContainer = document.getElementsByClassName('container')[0];
@@ -9,6 +9,7 @@ const append = (message, position) => {
     messageElement.classList.add('message');
     messageElement.classList.add(position);
     messageContainer.append(messageElement);
+    messageContainer.scrollTop = container.scrollHeight;
 }
 
 form.addEventListener('submit', (e)=>{

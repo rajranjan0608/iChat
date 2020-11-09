@@ -1,1 +1,1 @@
-web: nodemon ./server/index.js
+web: node index.js

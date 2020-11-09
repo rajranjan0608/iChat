@@ -1,3 +1,4 @@
+let PORT = process.env.PORT || 5000;
 const io = require('socket.io')('https://qclon.herokuapp.com/');
 const users = {};
 io.on('connection', socket => {

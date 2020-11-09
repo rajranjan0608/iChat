@@ -1,4 +1,4 @@
-const socket = io('https://qclon.herokuapp.com/');
+const socket = io();
 const form = document.getElementsByClassName('new-message')[0];
 const messageInput = document.getElementsByClassName('new-message-text')[0];
 const messageContainer = document.getElementsByClassName('container')[0];
